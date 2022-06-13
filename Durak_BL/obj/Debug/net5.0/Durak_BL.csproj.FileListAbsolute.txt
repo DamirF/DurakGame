@@ -1,0 +1,12 @@
+D:\Projects\Durak\Durak_BL\bin\Debug\net5.0\Durak_BL.deps.json
+D:\Projects\Durak\Durak_BL\bin\Debug\net5.0\Durak_BL.dll
+D:\Projects\Durak\Durak_BL\bin\Debug\net5.0\Durak_BL.pdb
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.csproj.AssemblyReference.cache
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.AssemblyInfoInputs.cache
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.AssemblyInfo.cs
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.csproj.CoreCompileInputs.cache
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.dll
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\refint\Durak_BL.dll
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\Durak_BL.pdb
+D:\Projects\Durak\Durak_BL\obj\Debug\net5.0\ref\Durak_BL.dll
