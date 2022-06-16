@@ -10,9 +10,9 @@ namespace Durak_BL.Model
         public List<Card> Cards { get; }
         public int TrumpSuit { get; }
 
-        public Pack(ref List<Card> cards)
+        public Pack(List<Card> cards)
         {
-            if(cards.Count < 36 || cards == null)
+            if(cards.Count != 36 || cards == null)
             {
                 throw new ArgumentException("", nameof(cards));
             }

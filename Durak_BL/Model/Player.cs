@@ -9,7 +9,7 @@ namespace Durak_BL.Model
     public class Player
     {
         public string Name { get; }
-        public List<Card> Cards { get; }
+        public List<Card> Cards { get; set; }
         public bool IsPlaying { get; set; }
 
         public Player(string name, ref Card[] cards, bool isPlaying )
