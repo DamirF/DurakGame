@@ -28,19 +28,28 @@ namespace Durak_BL.Model
             IsTrump = isTrump;
         } 
 
-        public bool CardIsCovered(ref Card CoveredCard, ref Card CoveringCard)
+        public static void SpecifyTrump(List<Card> cards, int trumpSuit)
+        {
+            foreach(var card in cards)
+            {
+                card.IsTrump = true ? (card.Suit == trumpSuit) : false;
+            }
+        }
+
+        #region Override Methods
+        public static bool operator <(Card firstCard, Card secondCard)
         {
             var result = false;
-            if(!CoveringCard.IsTrump)
+            if (!secondCard.IsTrump)
             {
-                    result = true ? (CoveredCard.Suit == CoveringCard.Suit &&
-                    CoveredCard.Rank < CoveringCard.Rank) : false;
+                result = true ? (firstCard == secondCard &&
+                firstCard.Rank < secondCard.Rank) : false;
             }
             else
             {
-                if(CoveredCard.IsTrump)
+                if (firstCard.IsTrump)
                 {
-                    result = true ? (CoveredCard.Rank < CoveringCard.Rank) : false;
+                    result = true ? (firstCard.Rank < secondCard.Rank) : false;
                 }
                 else
                 {
@@ -50,12 +59,52 @@ namespace Durak_BL.Model
             return result;
         }
 
-        public static void SpecifyTrump(List<Card> cards, int trumpSuit)
+        public static bool operator >(Card firstCard, Card secondCard)
         {
-            foreach(var card in cards)
+            var result = false;
+            if (!firstCard.IsTrump)
             {
-                card.IsTrump = true ? (card.Suit == trumpSuit) : false;
+                result = true ? (firstCard == secondCard &&
+                firstCard.Rank > secondCard.Rank) : false;
             }
+            else
+            {
+                if (secondCard.IsTrump)
+                {
+                    result = true ? (firstCard.Rank > secondCard.Rank) : false;
+                }
+                else
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
+
+        public static bool operator ==(Card firstCard, Card secondCard) =>
+            true ? (firstCard.Suit == secondCard.Suit) : false;
+        public static bool operator !=(Card firstCard, Card secondCard) =>
+            true ? (firstCard.Suit != secondCard.Suit) : false;
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(obj, null))
+            {
+                return false;
+            }
+
+            throw new NotImplementedException();
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

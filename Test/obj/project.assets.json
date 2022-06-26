@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net6.0": {
+      "Durak_BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Durak_BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Durak_BL.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Durak_BL/1.0.0": {
+      "type": "project",
+      "path": "../Durak_BL/Durak_BL.csproj",
+      "msbuildProject": "../Durak_BL/Durak_BL.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net6.0": [
+      "Durak_BL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\dfatk\\.nuget\\packages\\": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Durak\\Durak_BL\\Durak_BL.csproj",
-      "projectName": "Durak_BL",
-      "projectPath": "D:\\Projects\\Durak\\Durak_BL\\Durak_BL.csproj",
+      "projectUniqueName": "D:\\Projects\\Durak\\Test\\Test.csproj",
+      "projectName": "Test",
+      "projectPath": "D:\\Projects\\Durak\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\dfatk\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Durak\\Durak_BL\\obj\\",
+      "outputPath": "D:\\Projects\\Durak\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -29,16 +48,20 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "projectReferences": {}
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Projects\\Durak\\Durak_BL\\Durak_BL.csproj": {
+              "projectPath": "D:\\Projects\\Durak\\Durak_BL\\Durak_BL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -48,8 +71,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",

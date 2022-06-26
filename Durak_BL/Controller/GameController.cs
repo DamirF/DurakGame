@@ -10,7 +10,7 @@ namespace Durak_BL.Controller
     public class GameController
     {
         PackController packController;
-        List<Player> Players; // maybe will be changed to PlayerController;
+        List<PlayerController> Players; // maybe will be changed to PlayerController;
 
         public GameController()
         {

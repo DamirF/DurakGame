@@ -12,7 +12,7 @@ namespace Durak_BL.Controller
         private List<Card>[] DealedCards;
         public Pack Pack { get; }
 
-        public PackController(ref List<Player> players)
+        public PackController(ref List<PlayerController> players)
         {
             if(players.Count <= 1 || players.Count > 6)
             {
@@ -24,7 +24,7 @@ namespace Durak_BL.Controller
 
             for(int i = 0; i < players.Count; i++)
             {
-                players[i].Cards = DealedCards[i];
+                players[i].Player.Cards = DealedCards[i];
             }
         }
 
